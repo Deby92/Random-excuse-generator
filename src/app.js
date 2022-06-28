@@ -7,8 +7,6 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
-};
 
 generateExcuse = () => {
   let pronoun = ["A", "The", "My", "Our", "Your"];
@@ -55,4 +53,4 @@ generateExcuse = () => {
     " " +
     where[whereIndex];
   documen.getElementById("excuse").innerHTML = excuse;
-};
+}
