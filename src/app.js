@@ -5,10 +5,17 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = () => {
+  /*  window.location.reload(); */
+  document.querySelector("#button").addEventListener("click", () => {
+    document.querySelector("#the-excuse").innerHTML = generateExcuse();
+  });
   //write your code here
+  document.querySelector("#the-excuse").innerHTML = generateExcuse();
+  console.log("hello World");
+};
 
-generateExcuse = () => {
+const generateExcuse = () => {
   let pronoun = ["A", "The", "My", "Our", "Your"];
   let proIndex = Math.floor(Math.random() * pronoun.length);
   let subject = ["rabbit", "racoon", "owl", "kangaroo", "cat", "bat"];
@@ -52,5 +59,5 @@ generateExcuse = () => {
     possetion[possetionIndex] +
     " " +
     where[whereIndex];
-  documen.getElementById("excuse").innerHTML = excuse;
-}
+  return excuse;
+};
